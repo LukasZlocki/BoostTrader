@@ -1,0 +1,74 @@
+﻿<Window x:Name="BoostTrader" x:Class="BoostTrader2._0.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BoostTrader" ResizeMode="NoResize" WindowState="Maximized" Loaded="OnLoad" WindowStyle="None">
+    <Grid Background="#FF5D5D5D">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+
+
+
+        <!-- STREFA PRAWE MENU -->
+        <Canvas x:Name="canvasrightMenu" Background="#2b2727" Grid.Column="1" Grid.Row="1" >
+            <Label x:Name="lblPrice" Content="Price" Height="24" FontSize="10" Foreground="White" Canvas.Left="0" Canvas.Top="0" Background="Transparent" HorizontalAlignment="Left"/>
+        </Canvas>
+
+        <!-- STREFA DOLNE MENU -->
+        <Canvas Grid.Row="2" Background="#2b2727">
+            <Label x:Name="lblDate" Content="Date" Height="24" FontSize="10" Foreground="White" Canvas.Left="0" Canvas.Top="0" Background="Transparent" HorizontalAlignment="Left"/>
+        </Canvas>
+
+        <!-- STREFA GORNE MENU -->
+        <Canvas x:Name="canvasUpperMenu" Margin="0,0,0,0" Background="#2b2727" Grid.ColumnSpan="3" >
+            <Button x:Name="btn1m" Content="1m" Height="25"  Width="25" Canvas.Left="30" Canvas.Top="0" Click="btn1m_Click" />
+            <Button x:Name="btn3m" Content="3m" Height="25"  Width="25" Canvas.Left="60" Canvas.Top="0" Click="btn3m_Click"/>
+            <Button x:Name="btn6m" Content="6m" Height="25"  Width="25" Canvas.Left="90" Canvas.Top="0" Click="btn6m_Click"/>
+            <Button x:Name="btn1y" Content="1y" Height="25"  Width="25" Canvas.Left="120" Canvas.Top="0" Click="btn1y_Click"/>
+            <Button x:Name="btn2y" Content="2y" Height="25"  Width="25" Canvas.Left="150" Canvas.Top="0" Click="btn2y_Click"/>
+            <Button x:Name="btn3y" Content="3y" Height="25"  Width="25" Canvas.Left="180" Canvas.Top="0" Click="btn3y_Click"/>
+
+            <Button x:Name="btnStocksChoice" Content="Analyse" Height="25"  Width="25" Canvas.Left="300" Canvas.Top="0" Click="btnStocksChoice_Click"/>
+
+            <Button x:Name="btnGPWChoice" Content="gpw" Height="20"  Width="20" Canvas.Left="255" Canvas.Top="2" Click="btnGPWChoice_Click"/>
+            <Button x:Name="btnTFIChoice" Content="tfi" Height="20"  Width="20" Canvas.Left="230" Canvas.Top="2.5" Click="btnTFIChoice_Click"/>
+
+            <Button x:Name="btnUserColorPreferences" Content="CP" Height="25"  Width="25" Canvas.Left="470" Canvas.Top="0" Click="btnbtnUserColorPreferences_Click"/>
+            <Button x:Name="btnBackGroundWhite" Content="BW" Height="25"  Width="25" Canvas.Left="500" Canvas.Top="0" Click="btnBackGroundWhite_Click"/>
+            <Button x:Name="btnBackGroundGray" Content="BG" Height="25"  Width="25" Canvas.Left="530" Canvas.Top="0" Click="btnBackGroundGray_Click"/>
+
+            <Button x:Name="btnCloseWindow" Content="X" Height="25"  Width="25" Canvas.Right="0" Canvas.Top="0" Background="red" Click="btnCloseWindow_Click"/>
+        </Canvas>
+
+
+
+        <!-- STREFA GLOWNE OKNO WYKRESU  -->
+        <Canvas x:Name="canvasChartScreen"  Background="#152026" Grid.Row="1" ClipToBounds="True" />
+
+        <!-- STREFA GLOWNE OKNO SIATKI  -->
+        <Canvas x:Name="canvasGridScreen" Background="transparent" Grid.Row="1" MouseMove="canvasGridScreen_MouseMove" ClipToBounds="True" >
+            <Label x:Name="lbl1" Content="Label" Canvas.Left="30" Canvas.Top="20"/>
+            <Label x:Name="lbl2" Content="Label" Canvas.Left="30" Canvas.Top="40"/>
+            <Label x:Name="lbl3" Content="Label" Canvas.Left="30" Canvas.Top="60"/>
+            <Label x:Name="lbl4" Content="Label" Canvas.Left="30" Canvas.Top="80"/>
+            <Label x:Name="lbl5" Content="Label" Canvas.Left="30" Canvas.Top="100"/>
+            <Label x:Name="lbl6" Content="Label" Canvas.Left="30" Canvas.Top="120"/>
+
+            <Line x:Name="UserHorizontalLine" Stroke="white" StrokeThickness="0.8" />
+            <Line x:Name="UserVerticalLine" Stroke="white" StrokeThickness="0.8" />
+
+        </Canvas>
+
+
+
+
+
+    </Grid>
+</Window>

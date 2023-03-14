@@ -1,0 +1,15 @@
+﻿<Window x:Class="BoostTrader2._0.StockChoice"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="StockChoice" Height="500" Width="120" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent" >
+    <Grid Background="Gray" Opacity="0.50">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ListBox x:Name="LboxList" MouseDoubleClick="LboxList_Click" Background="#2b2727" Foreground="White" Grid.Row="1"  />
+        <TextBox x:Name="txtStringToFind" TextWrapping="Wrap" Text="find ..." KeyDown="InstantLookUp" HorizontalAlignment="Left" Width="98" />
+        <Button x:Name="btnClose" Content="X" Background="Red" Margin="98,0,0,0" Click="btnClose_Click" />
+
+    </Grid>
+</Window>

@@ -1,0 +1,8 @@
+﻿<Window x:Class="BoostTrader2._0.ColorPreferences"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         Title="ColorPreferences" Height="250" Width="250" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent" ShowInTaskbar="False" >
+    <Grid Background="Gray" Opacity="0.15" >
+
+    </Grid>
+</Window>
